@@ -1,6 +1,8 @@
 package br.com.alura.screenmatch.modelos;
 
-public class Filme extends ScreenMatch {
+import br.com.alura.screenmatch.calculos.Classificacao;
+
+public class Filme extends ScreenMatch implements Classificacao {
     private String diretor;
 
     public void setDiretor(String diretor){
@@ -9,5 +11,10 @@ public class Filme extends ScreenMatch {
 
     public String getDiretor() {
         return diretor;
+    }
+
+    @Override
+    public int getClassificacao() {
+        return (int) retornaMedia() / 2;
     }
 }

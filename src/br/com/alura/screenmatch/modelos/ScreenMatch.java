@@ -7,6 +7,7 @@ public class ScreenMatch {
     private String genero;
     private boolean incluidoNoPlano;
     private int totalAvaliacoes;
+    private int duracaoMinutos;
 
     public void exibeInformacoes(){
         System.out.println("Nome do filme: " + nome);
@@ -26,6 +27,14 @@ public class ScreenMatch {
     public void setIncluidoNoPlano(boolean incluidoNoPlano){
         this.incluidoNoPlano = incluidoNoPlano;
     }
+    public int getDuracaoMinutos() {
+        return duracaoMinutos;
+    }
+
+    public void setDuracaoMinutos(int duracaoMinutos){
+        this.duracaoMinutos = duracaoMinutos;
+    }
+
     public void avalia(double nota){
         somaDasAvaliacoes += nota;
         totalAvaliacoes++;
@@ -37,5 +46,6 @@ public class ScreenMatch {
     public int getTotalAvaliacoes(){
         return totalAvaliacoes;
     }
+
 
 }
